@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="coupon">
-			<view class="piece" v-for="(item,index) in navData" :key="index">
+			<view class="piece" v-for="(item,index) in data" :key="index">
 				<img class="image"
 					:src="item.src">
 				<span style="color:#666">{{item.name}}</span>
@@ -15,7 +15,7 @@
 	export default {
 		name:"i-nav",
 		props:{
-			navData:{
+			data:{
 				type:Array,
 				default:()=>[]
 			}

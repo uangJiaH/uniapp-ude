@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="count">
-			<view class="item" v-for="(item,index) in couponData" :key="index">
+			<view class="item" v-for="(item,index) in data" :key="index">
 				<view class="left">
 					<span class="two">￥{{item.price}}</span>
 					<span class="one">{{item.value.title}}</span>
@@ -19,7 +19,7 @@
 	export default {
 		name: "i-coupon",
 		props: {
-			couponData: {
+			data: {
 				type: Array,
 				default: () => []
 			}
